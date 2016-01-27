@@ -8,6 +8,9 @@ describe('Bank', function(){
   it('should be able to have individual accounts', function(){
     expect(bank.accounts).to.exist;
   });
+  it('should start with 0 accounts', function(){
+    expect(bank.accounts).to.be.empty;
+  });
 })
 
 describe('Account', function(){
