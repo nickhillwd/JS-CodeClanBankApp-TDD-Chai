@@ -15,4 +15,8 @@ describe('Account', function(){
     var account1 = new Account("Nick", "Hill", "Personal")
     expect(account1).to.have.all.keys(['holderFirst', 'holderLast', 'type', 'balance']);
   })
+  it('should begin with a balance of £0', function(){
+    var account1 = new Account("Nick", "Hill", "Personal")
+    expect(account1).to.contain.keys({'balance':0})
+  })
 })
