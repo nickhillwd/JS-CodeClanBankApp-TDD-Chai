@@ -5,6 +5,10 @@ var assert = chai.assert;
 var expect = chai.expect;
 
 describe('Bank', function(){
+  beforeEach(function(){
+    console.log("Removing all created accounts");
+    bank.accounts = [];
+  })
   it('should be able to have individual accounts', function(){
     expect(bank.accounts).to.exist;
   });
@@ -13,7 +17,9 @@ describe('Bank', function(){
   });
   it('should be able to add a new account to the array when a new account is crerated', function(){
   var account1 = new Account("Nick", "Hill", "Personal");
-  expect(bank.accounts).to.eql([0]);
+  console.log(bank.accounts)
+  expect(bank.accounts[0]).to.be.an('object');
+  expect(bank.accounts.length).to.eql(1);
   })
 })
 

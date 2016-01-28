@@ -1,13 +1,9 @@
-var acount = require('./account.js')
-
 var bank = {
-  accounts: []
-}
-
-Bank.prototype = {
-  newAccount: function(){
-    
+  accounts: [],
+  newAccount: function(account){
+    this.accounts.push(account);
   }
 }
 
-module.exports = bank
+
+module.exports = bank;
