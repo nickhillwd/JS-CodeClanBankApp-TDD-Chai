@@ -11,6 +11,10 @@ describe('Bank', function(){
   it('should start with 0 accounts', function(){
     expect(bank.accounts).to.be.empty;
   });
+  it('should be able to add a new account to the array when a new account is crerated', function(){
+  var account1 = new Account("Nick", "Hill", "Personal");
+  expect(bank.accounts).to.eql([0]);
+  })
 })
 
 describe('Account', function(){

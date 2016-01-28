@@ -5,6 +5,16 @@ var Account = function(holderFirst, holderLast, type){
   this.holderLast = holderLast;
   this.type = type;
   this.balance = 0;
+  this.onNew = function(){
+    bank.newAccount();
+  }
+  this.onNew();
 }
+
+// Account.prototype = {
+//   new: function(){
+
+//   }
+// }
 
 module.exports = Account;
