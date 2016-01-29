@@ -1,18 +1,18 @@
 var bank = require('./bank.js');
 
 var Account = function(holderFirst, holderLast, type){
-  this.holderFirst = holderFirst;
-  this.holderLast = holderLast;
+  this.holderFirst = holderFirst.toLowerCase();
+  this.holderLast = holderLast.toLowerCase();
   this.type = type;
   this.balance = 0;
 
   bank.newAccount(this);
 }
 
-// Account.prototype = {
-//   new: function(){
-
-//   }
-// }
+Account.prototype = {
+  makeDeposit: function(amount){
+    this.balance += parseInt(amount);
+  }
+}
 
 module.exports = Account;
